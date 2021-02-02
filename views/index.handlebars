@@ -6,6 +6,7 @@
     {{#unless devoured}}
     <li>
         {{burger_name}}
+        <button type="submit" class="devouredBurger" data-id="{{id}}">Devour Burger</button>
     </li>
     {{/unless}}
     {{/each}}
@@ -33,4 +34,5 @@
     </div>
 
     <button type="submit">Create Burger</button>
+    
 </form>
