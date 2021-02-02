@@ -1,6 +1,5 @@
 $(".create-form").on("submit", function (event) {
     event.preventDefault();
-
     const newBurger = {
         name: $("#burgerName").val().trim()
     };
@@ -10,15 +9,15 @@ $(".create-form").on("submit", function (event) {
         type: "POST",
         data: newBurger
     }).then(function () {
-        console.log("Burger successfully made!");
+        console.log("Burger successfully created!");
         location.reload();
     }
     );
 });
 
+
 $(".devouredBurger").on("click", function (event) {
     event.preventDefault();
-
     const devouredBurger = {
         id: $(this).attr("data-id")
     };
@@ -32,4 +31,4 @@ $(".devouredBurger").on("click", function (event) {
         location.reload();
     }
     );
-}); 
+});
